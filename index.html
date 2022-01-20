@@ -7,26 +7,66 @@
     <title>WWPRORT_SEARCH</title>
     <style>
         body{
+            height:100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-direction: column;
-        }
+            transform: translate(0%,-18%);
+            }
         header{
             margin:70px;
-            padding-right: 1000px;  
+            /* transform: translate(-550%,0%); */
            }
-        nav{
-            align-self: auto;
-            margin-bottom: 20px;
+        .social{
+           margin-top: 2%;    
+           position: relative;  
+           left: 39%;     
+           padding: 1.5%;
         }
         img{
             vertical-align: middle;
         }
-        /* input[type=checkbox] .potal:hover{
+        input[type=checkbox]:hover +.potal:hover{
             cursor: pointer;
-        }*/
-        
+        }
+        input[type=checkbox]{
+            width: 18px;
+            height: 18px;
+            border: 1px solid rgb(156, 156, 156);
+            border-radius: 5px;
+            }
+        #potal1{
+            position: relative;  
+            top: -4.5px;
+        }
+        #potal2{
+            position: relative;  
+            top: -6.5px;
+        }
+        #potal3{
+            position: relative;  
+            top: -3.2px;
+        }
+        #potal45{
+            position: relative;  
+            top: -7px;
+        }
+        input[type=text]{
+            border: 1px solid rgb(156, 156, 156);
+            height:30px;
+            font-size: 19px;
+            border-radius: 5px;
+            position: relative;  
+            top: 3.7px;
+        }
+        input[type=submit]{
+            width: 35px;
+            height: 35px;
+            border: 1px solid rgb(156, 156, 156);
+            border-radius: 5px;
+            
+        }
        .social:hover{
            cursor: pointer;
        }
@@ -34,7 +74,11 @@
            border-style: none;
            background-color: rgba(255, 255, 255, 0);
        }
-     
+       footer{
+           position: absolute;
+           left: 26%;
+           bottom: 0;
+       }
     </style>
 </head>
 <body>
@@ -42,17 +86,17 @@
         <img src="icons\winnie world.png" alt="winnie world" width="90">
     </header>
     <nav>
-        <label><input type="checkbox" name="site" value="naver"><img  class= potal src="icons\naver.png" alt="naver" width="150"></label>
-        <label><input type="checkbox" name="site" value="google"><img  class= potal src="icons\google.png" alt="google" width="150"></label>
-        <label><input type="checkbox" name="site" value="wiki"><img  class= potal src="icons\wiki.png" alt="wiki" width="150"></label>
-        <label><input type="checkbox" name="site" value="coupang"><img class= potal src="icons\coupang.png" alt="coupang" width="150"></label>
-        <label><input type="checkbox" name="site" value="youtube"><img class= potal src="icons\youtube.png" alt="youtube" width="150"></label>
+        <label><input type="checkbox" name="site" value="naver"><img id="potal1" class= potal src="icons\naver.png" alt="naver" width="150"></label>
+        <label><input type="checkbox" name="site" value="google"><img id="potal2" class= potal src="icons\google.png" alt="google" width="155"></label>
+        <label><input type="checkbox" name="site" value="wiki"><img id="potal3" class= potal src="icons\wiki.png" alt="wiki" width="148"></label>
+        <label><input type="checkbox" name="site" value="coupang"><img id="potal45" class= potal src="icons\coupang.png" alt="coupang" width="162"></label>
+        <label><input type="checkbox" name="site" value="youtube"><img id="potal45" class= potal src="icons\youtube.png" alt="youtube" width="162"></label>
     </nav>    
-    <section>
-        <p><input type="text" size=120px height="150px" value="검색어를 입력하세요 :)"><input type="submit" value="?"></p>
-        <img class=social src="icons\instagram.png" alt="instagram" width="25">
-        <img class=social src="icons\facebook.png" alt="facebook" width="25">
-        <img class=social src="icons\twitter.png" alt="twitter" width="25">
+    <section>        
+        <p><input type="text" size=80px value="검색어를 입력하세요 :)"><input type="submit" value="?"></p>
+        <img class=social src="icons\instagram.png" alt="instagram" width="32">
+        <img class=social src="icons\facebook.png" alt="facebook" width="32">
+        <img class=social src="icons\twitter.png" alt="twitter" width="32">
     </section>
     <footer>
         <button><img src="icons\timer.png"width="25" alt="timer"></button>
