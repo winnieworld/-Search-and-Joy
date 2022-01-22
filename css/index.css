@@ -1,0 +1,98 @@
+        body{
+            height:100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            transform: translate(0%,-18%);
+            }
+        header{
+            margin:70px;
+            /* transform: translate(-550%,0%); */
+           }
+        header:hover{
+            cursor: pointer;
+        }
+        .social{
+           position: relative;  
+           left: 39%;     
+           padding: 1.5%;
+        }
+        img{
+            vertical-align: middle;
+        }
+        input[type=checkbox]:hover +.potal:hover{
+            cursor: pointer;
+        }
+        input[type=checkbox]{
+            width: 18px;
+            height: 18px;
+            border: 1px solid rgb(156, 156, 156);
+            border-radius: 5px;
+            }
+        #potal1{
+            position: relative;  
+            top: -4.5px;
+        }
+        #potal2{
+            position: relative;  
+            top: -6.5px;
+        }
+        #potal3{
+            position: relative;  
+            top: -3.2px;
+        }
+        #potal45{
+            position: relative;  
+            top: -7px;
+        }
+        input[type=checkbox]:hover{
+            cursor: pointer;        
+        }
+        input[type=text]{
+            border: 1px solid rgb(156, 156, 156);
+            height:30px;
+            font-size: 19px;
+            border-radius: 5px;
+           
+        }
+        input[type=submit]{
+            width: 35px;
+            height: 35px;
+            border: 1px solid rgb(156, 156, 156);
+            border-radius: 5px;
+            font-size: 1.5rem;
+            color:rgb(44, 42, 44);
+            text-shadow: 0px 2px rgba(0, 0, 0, 0.44);
+            position: relative;  
+            top: 2.3px;
+        }
+        input[type=submit]:hover{
+            cursor: pointer;
+        }
+       .social:hover{
+           cursor: pointer;
+       }
+       #instagram{
+           transform: rotate(-30deg);
+       }
+       #facebook{
+           transform: rotate(5deg);
+           position: relative;  
+            top: 10px;
+       }
+       #twitter{
+           transform: rotate(-10deg);
+       }
+       button{
+           border-style: none;
+           background-color: rgba(255, 255, 255, 0);
+       }
+       footer{
+           position: absolute;
+           left: 10%;
+           bottom: -10%;
+       }
+       .tool:hover{
+           cursor: pointer;
+              }
