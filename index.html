@@ -1,43 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WWPRORT_SEARCH</title>
-    <link rel="stylesheet" href="css\index.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css\index.css" />
+    <script src="jquery\jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
     <header>
-        <img onclick="location.href='https://winnieworld.github.io/-Search-and-Joy/'" src="icons\winnie world.png" alt="winnie world" width="90">
+      <img
+        onclick="location.href='https://winnieworld.github.io/-Search-and-Joy/'"
+        src="icons\winnie world.png"
+        alt="winnie world"
+        width="90"
+      />
     </header>
     <nav>
-        <label><input type="checkbox" name="site" value="naver"><img id="potal1" class= potal src="icons\naver.png" alt="naver" width="150"></label>
-        <label><input type="checkbox" name="site" value="google"><img id="potal2" class= potal src="icons\google.png" alt="google" width="155"></label>
-        <label><input type="checkbox" name="site" value="wiki"><img id="potal3" class= potal src="icons\wiki.png" alt="wiki" width="148"></label>
-        <label><input type="checkbox" name="site" value="coupang"><img id="potal45" class= potal src="icons\daum.png" alt="daum" width="120"></label>
-        <label><input type="checkbox" name="site" value="coupang"><img id="potal45" class= potal src="icons\coupang.png" alt="coupang" width="162"></label>
-        <label><input type="checkbox" name="site" value="youtube"><img id="potal45" class= potal src="icons\youtube.png" alt="youtube" width="162"></label>
-        
-    </nav>    
-    <section>      
-        <form action= "result.html" method="get">
-        <p><input name="search" type="text" size=80px placeholder="검색어를 입력하세요:)" aria-label="검색어를 입력하세요" aria-describedby="button-addon"><input id="button-addon" type="submit" value="?"></p>
-        </form>
-        <img onclick="location.href='https://www.instagram.com/'" class=social id="instagram" src="icons\instagram.png" alt="instagram" width="32">
-        <img onclick="location.href='https://www.facebook.com/'" class=social id="facebook" src="icons\facebook.png" alt="facebook" width="32">
-        <img onclick="location.href='https://twitter.com/'" class=social id="twitter" src="icons\twitter.png" alt="twitter" width="32">
+      <label
+        ><input type="checkbox" name="site" value="naver" /><img
+          id="potal1"
+          class="potal"
+          src="icons\naver.png"
+          alt="naver"
+          width="150"
+      /></label>
+      <label
+        ><input type="checkbox" name="site" value="google" /><img
+          id="potal2"
+          class="potal"
+          src="icons\google.png"
+          alt="google"
+          width="155"
+      /></label>
+      <label
+        ><input type="checkbox" name="site" value="wiki" /><img
+          id="potal3"
+          class="potal"
+          src="icons\wiki.png"
+          alt="wiki"
+          width="148"
+      /></label>
+      <label
+        ><input type="checkbox" name="site" value="coupang" /><img
+          id="potal45"
+          class="potal"
+          src="icons\daum.png"
+          alt="daum"
+          width="120"
+      /></label>
+      <label
+        ><input type="checkbox" name="site" value="coupang" /><img
+          id="potal45"
+          class="potal"
+          src="icons\coupang.png"
+          alt="coupang"
+          width="162"
+      /></label>
+      <label
+        ><input type="checkbox" name="site" value="youtube" /><img
+          id="potal45"
+          class="potal"
+          src="icons\youtube.png"
+          alt="youtube"
+          width="162"
+      /></label>
+    </nav>
+    <section>
+      <form action="result.html" method="get">
+        <p>
+          <input
+            name="search"
+            type="text"
+            size="80px"
+            placeholder="검색어를 입력하세요:)"
+            aria-label="검색어를 입력하세요"
+            aria-describedby="button-addon"
+          /><input id="button-addon" type="submit" value="?" />
+        </p>
+      </form>
+      <img
+        onclick="location.href='https://www.instagram.com/'"
+        class="social"
+        id="instagram"
+        src="icons\instagram.png"
+        alt="instagram"
+        width="32"
+      />
+      <img
+        onclick="location.href='https://www.facebook.com/'"
+        class="social"
+        id="facebook"
+        src="icons\facebook.png"
+        alt="facebook"
+        width="32"
+      />
+      <img
+        onclick="location.href='https://twitter.com/'"
+        class="social"
+        id="twitter"
+        src="icons\twitter.png"
+        alt="twitter"
+        width="32"
+      />
     </section>
+    <div class="calculator">
+      <form name="forms">
+        <input type="text" name="output" />
+        <input
+          type="button"
+          class="clear"
+          value="C"
+          onclick="document.forms.output.value=' '"
+        />
+        <input
+          type="button"
+          class="operator"
+          value="/"
+          onclick="document.forms.output.value+='/'"
+        />
+        <input
+          type="button"
+          value="1"
+          onclick="document.forms.output.value='1'"
+        />
+        <input
+          type="button"
+          value="2"
+          onclick="document.forms.output.value+='2'"
+        />
+        <input
+          type="button"
+          value="3"
+          onclick="document.forms.output.value+='3'"
+        />
+        <input
+          type="button"
+          class="operator"
+          value="*"
+          onclick="document.forms.output.value+='*'"
+        />
+        <input
+          type="button"
+          value="4"
+          onclick="document.forms.output.value+='4'"
+        />
+        <input
+          type="button"
+          value="5"
+          onclick="document.forms.output.value+='5'"
+        />
+        <input
+          type="button"
+          value="6"
+          onclick="document.forms.output.value+='6'"
+        />
+        <input
+          type="button"
+          class="operator"
+          value="+"
+          onclick="document.forms.output.value+='+'"
+        />
+        <input
+          type="button"
+          value="7"
+          onclick="document.forms.output.value+='7'"
+        />
+        <input
+          type="button"
+          value="8"
+          onclick="document.forms.output.value+='8'"
+        />
+        <input
+          type="button"
+          value="9"
+          onclick="document.forms.output.value+='9'"
+        />
+        <input
+          type="button"
+          class="operator"
+          value="-"
+          onclick="document.forms.output.value+='-'"
+        />
+        <input
+          type="button"
+          class="dot"
+          value="."
+          onclick="document.forms.output.value+='.'"
+        />
+        <input
+          type="button"
+          value="0"
+          onclick="document.forms.output.value='0'"
+        />
+        <input
+          type="button"
+          class="operator Cresult"
+          value="="
+          onclick="document.forms.output.value=eval(document.forms.output.value)"
+        />
+      </form>
+    </div>
     <footer>
-        <button><img class=tool src="icons\timer.png"width="25" alt="timer"></button>
-        <button><img class=tool src="icons\notebook.png"width="25" alt="memo"></button>
-        <button><img class=tool src="icons\calculator.png"width="25" alt="calculator"></button>
-        <button><img class=tool src="icons\calendar.png"width="25" alt="calendar"></button>
+      <button>
+        <img class="tool" src="icons\timer.png" width="25" alt="timer" />
+      </button>
+      <button>
+        <img class="tool" src="icons\notebook.png" width="25" alt="memo" />
+      </button>
+      <button>
+        <img
+          class="tool"
+          src="icons\calculator.png"
+          width="25"
+          alt="calculator"
+        />
+      </button>
+      <button>
+        <img class="tool" src="icons\calendar.png" width="25" alt="calendar" />
+      </button>
     </footer>
-  
-    <script>
 
-    </script>
-    
-</body>
+    <script></script>
+  </body>
 </html>

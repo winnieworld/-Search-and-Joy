@@ -70,7 +70,7 @@ nav{
    transform: translate(5%,45%);
 }
 select{ 
-   width: 100px; height: 28px; font-size: 15px; color: rgb(219, 219, 219); background-color: #464646; border:2px solid #ddd; border-radius: 7px;                   
+   width: 100px; height: 28px; font-size: 15px; color: rgb(219, 219, 219); background-color: #585858; border:2px solid #ddd; border-radius: 7px;                   
    }
 .selector{
    text-align: right;
