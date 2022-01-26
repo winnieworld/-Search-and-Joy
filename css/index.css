@@ -202,11 +202,11 @@ footer {
   border-bottom: 1px solid #333333;
   border-left: 1px solid #333333;
 }
-.day:nth-child(7n + 1),
+/* .day:nth-child(7n + 1),
 .date:nth-child(7n + 1) {
   color: tomato;
 }
 .day:nth-child(7n),
 .date:nth-child(7n) {
   color: royalblue;
-}
+} */

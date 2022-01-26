@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <style>
+      * {
+        position: relative;
+        transform: translate(10%, 100%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="timer_wrap">
+      <div class="timer">00:00.00</div>
+      <div class="buttons">
+        <button class="timer_button start">start</button>
+        <button class="timer_button stop">stop</button>
+        <button class="timer_button reset">reset</button>
+      </div>
+    </div>
+    <script>
+      const get = (target) =>{
+          return document.querySelector(target)
+      }
+
+      class stopwatch{
+          constructor(element){
+              this.timer = element
+              this.interval = null
+              this.defaultTime = '00:00.00'
+              this.startTime = 0
+              this.elapsedTime = 0
+          }
+
+          addZero(number){
+              if (number < 10){
+                  return '0' = number
+              }
+              if(number > 99){
+                  return number.toString().slice(0,2)
+              }
+              return number
+          }
+
+
+          timeToString(time){
+              const date = new Date(time)
+              const minutes = date.getUTCMinutes()
+              const seconds = date.getUTCSeconds()
+              const millisecond = date.getUTCMilliseconds()
+              return `${this.addZero(minutes)}:${this.addZero(seconds)}.${this.addZero(millisecond)}`}
+
+          print(text){
+              this.timer.innerHTML = text
+          }
+
+          startTimer() {
+              this.elapsedTime = date.now()-this.startTime
+              const time = this.timeToString(this.elapsedTime)
+              this.print(time)
+          }
+
+          start(){
+              clearInterval(this.interval)
+              this.startTime = Date.now()-this.elapsedTime
+              this.interval = setInterval(this.startTimer.bind(this), 10)
+          }
+          stop(){
+              clearInterval(this.interval)
+          }
+          reset(){
+              clearInterval(this.interval)
+              this.print(this.defaultTime)
+              this.interval = null
+              this.startTime = 0
+              this.elapsedTime = 0
+          }
+      }
+
+      const $startButton = get('.timer_button.start')
+      const $stopButton = get('.timer_button.stop')
+      const $resetButton = get('.timer_button.reset')
+      const $timer = get('.timer')
+      const stopwatch = new Stopwatch($timer)
+
+      $startButton.addEventListener('click',()=>{
+          stopwatch.start()
+      })
+      $stopButton.addEventListener('click',()=>{
+          stopwatch.stop()
+      })
+      $resetButton.addEventListener('click',()=>{
+          stopwatch.reset()
+      })
+    </script>
+  </body>
+</html>

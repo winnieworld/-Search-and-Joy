@@ -24,7 +24,7 @@ if(PLDay !== 6){
     }
 }
 
-for(let i=1; i<7-TLDay; i++){
+for(let i = 1; i < 7-TLDay; i++) {
     nextDates.push(i);
 }
 
