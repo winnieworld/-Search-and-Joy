@@ -71,6 +71,7 @@
       <form action="result.html" method="get">
         <p>
           <input
+            id="search_box"
             name="search"
             type="text"
             size="80px"
@@ -105,7 +106,7 @@
         width="32"
       />
     </section>
-    <div class="timer_wrap">
+    <div class="timer_wrap" id="timer">
       <div class="timer">00:00.00</div>
       <div class="buttons">
         <button class="timer_button start">start</button>
@@ -113,7 +114,7 @@
         <button class="timer_button reset">reset</button>
       </div>
     </div>
-    <div class="calculator">
+    <div class="calculator" id="calculator">
       <form name="forms">
         <input type="text" name="output" />
         <input
@@ -234,13 +235,13 @@
     </div>
     <script src="calender.js"></script> -->
     <footer>
-      <button>
+      <button id="ti">
         <img class="tool" src="icons\timer.png" width="25" alt="timer" />
       </button>
-      <button>
+      <button id="me">
         <img class="tool" src="icons\notebook.png" width="25" alt="memo" />
       </button>
-      <button>
+      <button id="cal">
         <img
           class="tool"
           src="icons\calculator.png"
@@ -248,10 +249,14 @@
           alt="calculator"
         />
       </button>
-      <button>
+      <button id="calen">
         <img class="tool" src="icons\calendar.png" width="25" alt="calendar" />
       </button>
+      <span id="date"></span>
+      <span id="day"></span>
+      <span id="clock"></span>
     </footer>
     <script src="timer.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>
