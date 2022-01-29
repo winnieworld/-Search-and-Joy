@@ -30,12 +30,7 @@ input[type="checkbox"] {
   border: 1px solid rgb(156, 156, 156);
   border-radius: 5px;
 }
-span {
-  text-align: right;
-  margin: 3px;
-  position: relative;
-  top: 5px;
-}
+
 #potal1 {
   position: relative;
   top: -4.5px;

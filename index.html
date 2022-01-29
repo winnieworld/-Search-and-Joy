@@ -68,14 +68,14 @@
       /></label>
     </nav>
     <section>
-      <form action="result.html" method="get">
+      <form action="result.html" method="get" id="search">
         <p>
           <input
-            id="search_box"
-            name="search"
+            id="searchtext"
+            name="searchtext"
             type="text"
             size="80px"
-            placeholder="검색어를 입력하세요:)"
+            placeholder=""
             aria-label="검색어를 입력하세요"
             aria-describedby="button-addon"
           /><input id="button-addon" type="submit" value="?" />
@@ -252,9 +252,6 @@
       <button id="calen">
         <img class="tool" src="icons\calendar.png" width="25" alt="calendar" />
       </button>
-      <span id="date"></span>
-      <span id="day"></span>
-      <span id="clock"></span>
     </footer>
     <script src="timer.js"></script>
     <script src="index.js"></script>
