@@ -64,10 +64,102 @@ document.addEventListener("DOMContentLoaded", function () {
    
   });
 
+  //캘린더
+  function Calender(Date, CalTableId){
+    this.tbl = document.getElementById(CalTableId);
+    this.isFirst = true;
+    this.today = Date;
+};
+
+Calender.prototype.setNext = function(){
+    const d = this.today;
+    this. today= new Date(d.getFullYear(),d.getMonth() + 1, d.getDay());
+    this.build();
+};
+Calender.prototype.setPrev=function(){
+    const d = this.today;
+    this. today= new Date(d.getFullYear(),d.getMonth() - 1, d.getDay());
+    this.build();
+};
+
+Calender.prototype.build = function(){
+    let i=0;
+    let row= null;
+    let cell= null;
+    const t = this.tbl;
+    const year = this.today.getFullYear();
+    const month= this.today.getMonth();
+
+    if(this.isFirst){
+        row= t.insertRow();
+        cell = row.insertCell();
+        const prev = "prev"+t.id;
+        const next = 'next'+t.id;
+        
+        cell.innerHTML ="<button id ="+prev+">&lt;</button>";
+        document.getElementById(prev).addEventListener('click',(e)=>{
+                e.preventDefault();
+                this.isFirst=false;
+                this.setNext();
+            });
+        cell = row.insertCell();
+        cell.colSpan = 5;
+        cell.innerHTML ="<div id = head"+t.id+">"+year+"년"+(month+1)+"월</div>";
+
+        cell = row.insertCell();
+        cell.innerHTML="<button id="+next+">&gt;</button>";
+
+        document.getElementById(next).addEventListener('click',(e)=>{
+            e.preventDefault();
+            this.isFirst=false;
+            this.setNext();
+        })
+        const week = ["일","월","화","수","목","금","토"];
+        row = t.insertRow();
+        for(i=0; i<week.length;i++){
+            cell = row.insertCell()
+            cell.textContent = week[i];
+        }
+    }else{
+        while(t.rows.length > 2){
+            t.deleteRow(t.rows.length-1);
+        }
+        this.isFirst = false;
+
+    }
+    if(!this.isFirst){
+        document.getElementById("head"+t.id).innerHTML =
+        "<div id= head"+ t.id + ">" +year+"년"+(month+1)+"월</div>";
+    }
+    const nMonth = new Date(year,month,1);
+    const lastDate = new Date(year,month+1 ,0);
+
+    row = t.insertRow();
+    let cnt = 0;
+
+    for(i=0;i<nMonth.getDay(); i++){
+        cell = row.insertCell();
+        cnt++;
+    }
+    for(i=1;i<=lastDate.getDate(); i++){
+        cell = row.insertCell();
+        cell.textContent = i;
+        if(cnt++&&cnt%7==0)
+
+        row=t.insertRow();   
+
+    }
+}
+
+
   const cal = document.getElementById('cal');
   const calculator = document.getElementById('calculator');
   const ti = document.getElementById('ti');
   const timer = document.getElementById('timer');
+  const mo = document.getElementById('mo');
+  const memo = document.getElementById('me');
+  const calen = document.getElementById('calen');
+  const calender = document.getElementById('calender');
   
   cal.addEventListener('click',function(){
    if(calculator.style.display== 'inline-block'){
@@ -81,10 +173,21 @@ document.addEventListener("DOMContentLoaded", function () {
     if(timer.style.display=='inline-block'){
       timer.style.display= 'none'}else{
         timer.style.display= 'inline-block'
-      };
-   
+      };   
   });
-   
+    
+  memo.addEventListener('click',function(){
+    if(mo.style.display=='inline-block'){
+      mo.style.display= 'none'}else{
+        mo.style.display= 'inline-block'
+      };   
+  });
+  celender.addEventListener('click',function(){
+    if(celen.style.display=='inline-block'){
+      celen.style.display= 'none'}else{
+        celen.style.display= 'inline-block'
+      };   
+  });
    
     
     //  search.addEventListener('click',function(){search.sc.value = 'randText';});

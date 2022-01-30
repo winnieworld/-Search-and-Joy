@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WWPRORT_SEARCH</title>
+    <link rel="icon" href="icons\winnie_world_wpO_icon.ico" />
     <link rel="stylesheet" href="css\index.css" />
     <script src="jquery\jquery-3.6.0.min.js"></script>
   </head>
@@ -44,7 +45,7 @@
       /></label>
       <label
         ><input type="checkbox" name="site" value="coupang" /><img
-          id="potal45"
+          id="potal4"
           class="potal"
           src="icons\daum.png"
           alt="daum"
@@ -52,7 +53,7 @@
       /></label>
       <label
         ><input type="checkbox" name="site" value="coupang" /><img
-          id="potal45"
+          id="potal5"
           class="potal"
           src="icons\coupang.png"
           alt="coupang"
@@ -60,7 +61,7 @@
       /></label>
       <label
         ><input type="checkbox" name="site" value="youtube" /><img
-          id="potal45"
+          id="potal6"
           class="potal"
           src="icons\youtube.png"
           alt="youtube"
@@ -106,6 +107,8 @@
         width="32"
       />
     </section>
+
+    <!--타이머-->
     <div class="timer_wrap" id="timer">
       <div class="timer">00:00.00</div>
       <div class="buttons">
@@ -113,6 +116,8 @@
         <button class="timer_button stop">stop</button>
         <button class="timer_button reset">reset</button>
       </div>
+
+      <!-- 계산기 -->
     </div>
     <div class="calculator" id="calculator">
       <form name="forms">
@@ -211,33 +216,17 @@
         />
       </form>
     </div>
-    <!-- <div class="calender">
-      <div class="header">
-        <div class="year-month"></div>
-        <div class="nav">
-          <button class="nav-btn go-prev">&lt;</button>
-          <button class="nav-btn go-prev">today</button>
-          <button class="nav-btn go-prev">&gt;</button>
-        </div>
-      </div>
-      <div class="main">
-        <div class="days">
-          <div class="day">일</div>
-          <div class="day">월</div>
-          <div class="day">화</div>
-          <div class="day">수</div>
-          <div class="day">목</div>
-          <div class="day">금</div>
-          <div class="day">토</div>
-        </div>
-        <div class="dates"></div>
-      </div>
+    <textarea id="mo"> "내용은 저장되지 않습니다."</textarea>
+    <!-- 캘린더 -->
+    <div class="calen" id="calen">
+      <table class="calenar" id="cal_0"></table>
     </div>
-    <script src="calender.js"></script> -->
+
     <footer>
       <button id="ti">
         <img class="tool" src="icons\timer.png" width="25" alt="timer" />
       </button>
+
       <button id="me">
         <img class="tool" src="icons\notebook.png" width="25" alt="memo" />
       </button>
@@ -249,11 +238,18 @@
           alt="calculator"
         />
       </button>
-      <button id="calen">
+      <button id="calender">
         <img class="tool" src="icons\calendar.png" width="25" alt="calendar" />
       </button>
     </footer>
     <script src="timer.js"></script>
     <script src="index.js"></script>
+    <script>
+      (function () {
+        for (let i = 0; i < 12; i++) {
+          new Calender(new Date(2021, i, 1), "cal_" + i).build();
+        }
+      })();
+    </script>
   </body>
 </html>

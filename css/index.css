@@ -5,6 +5,21 @@ body {
   justify-content: center;
   flex-direction: column;
   transform: translate(0%, -18%);
+  /* background: no-repeat center url(background.jpg);
+  background-size: cover; */
+  margin: 0;
+}
+body:before {
+  content: "";
+  background: linear-gradient(
+    to bottom,
+    rgba(107, 134, 209, 0.795),
+    transparent
+  );
+  position: absolute;
+  top: 0;
+  height: 33%;
+  width: 100%;
 }
 header {
   margin: 70px;
@@ -43,10 +58,13 @@ input[type="checkbox"] {
   position: relative;
   top: -3.2px;
 }
-#potal45 {
+#potal4,
+#potal5,
+#potal6 {
   position: relative;
   top: -7px;
 }
+
 input[type="checkbox"]:hover {
   cursor: pointer;
 }
@@ -134,7 +152,7 @@ footer {
 .calculator {
   display: none;
   position: absolute;
-  left: 9.5%;
+  left: 12%;
   bottom: -5%;
   box-sizing: border-box;
   width: 190px;
@@ -178,69 +196,88 @@ footer {
 .calculator form .Cresult {
   grid-column: span 2;
 }
-
+/* for memo */
+#mo {
+  display: none;
+  position: absolute;
+  left: 11%;
+  bottom: -5%;
+  height: 150px;
+  width: 250px;
+  border-radius: 10%;
+  padding: 01.5%;
+  color: #474747;
+  background-color: #f7e9e9;
+  border: 0.5px solid #ecd3da;
+}
 /* for calender */
-
-.calender {
-  font-family: sans-serif;
-  box-sizing: border-box;
-  width: 300px;
+td {
+  padding-right: 10px;
+  position: relative;
+  transform: translate(6px, 0px);
 }
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+tbody tr:nth-child(2) td {
+  padding-right: 8.5px;
 }
-.year-month {
-  font-size: 25px;
-}
-.nav {
-  display: flex;
-  transform: translate(0, 50%);
-  border: 1px solid #333333;
-  border-radius: 5px;
-}
-.nav-btn {
-  width: 20px;
-  height: 20px;
-  border: none;
-  font-size: 14px;
-  line-height: 4px;
-  background-color: transparent;
-  cursor: pointer;
-}
-.go-today {
-  width: 75px;
-  border-left: 1px solid #333333;
-  border-right: 1px solid #333333;
-}
-.days {
+tbody tr:nth-child(2) {
   display: flex;
   margin: 25px 0 10px;
-}
-.day {
   width: calc(100% / 7);
   text-align: center;
 }
-.dates {
+tbody tr td:nth-child(7) {
+  color: rgb(3, 3, 199);
+}
+tbody tr td:nth-child(1) {
+  color: rgb(194, 1, 1);
+}
+
+.calen {
+  display: none;
+  background-color: rgb(207, 169, 169);
+  border-radius: 15%;
+  width: 250px;
+  height: 270px;
+  position: absolute;
+  left: 15%;
+  bottom: -5%;
+}
+.calenar {
+  border-radius: 15%;
+  width: 250px;
+  height: 270px;
   display: flex;
-  flex-flow: row wrap;
-  height: 180px;
-  border-top: 1px solid #333333;
-  border-right: 1px solid #333333;
+  align-items: center;
+  justify-content: center;
 }
-.date {
-  width: calc(100% / 7);
-  padding: 15px;
-  text-align: right;
-  border-bottom: 1px solid #333333;
-  border-left: 1px solid #333333;
+.calenar td {
+  text-align: center;
+  font-size: 17px;
 }
-/* .day:nth-child(7n + 1),
-.date:nth-child(7n + 1) {
-  color: tomato;
+.calenar button {
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  font-size: 15px;
+  border: 1px solid #d5d5d5;
+  border-radius: 6px;
+  padding: 0 12px;
+  font-weight: 200;
+  line-height: 1.5;
+  cursor: pointer;
+  box-sizing: border-box;
+  position: relative;
 }
-.day:nth-child(7n),
-.date:nth-child(7n) {
-  color: royalblue;
-} */
+.calenar button:hover {
+  background-color: skyblue;
+  transition: 1s;
+}
+.calenartr:first-child {
+  background-color: royalblue;
+  border-radius: 40px;
+}
+.calenar tr:first-child td:nth-child(2) {
+  font-size: 24px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.045);
+  color: #fff;
+}
