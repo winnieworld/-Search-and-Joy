@@ -161,6 +161,7 @@ Calender.prototype.build = function(){
   const calen = document.getElementById('calen');
   const calender = document.getElementById('calender');
   
+  
   cal.addEventListener('click',function(){
    if(calculator.style.display== 'inline-block'){
     calculator.style.display='none'
@@ -182,10 +183,11 @@ Calender.prototype.build = function(){
         mo.style.display= 'inline-block'
       };   
   });
-  celender.addEventListener('click',function(){
-    if(celen.style.display=='inline-block'){
-      celen.style.display= 'none'}else{
-        celen.style.display= 'inline-block'
+ 
+  calender.addEventListener('click',function(){
+    if(calen.style.display=='inline-block'){
+      calen.style.display= 'none'}else{
+        calen.style.display= 'inline-block'
       };   
   });
    
