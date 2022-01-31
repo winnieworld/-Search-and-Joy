@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   //캘린더
-  function Calender(Date, CalTableId){
+function Calender(Date, CalTableId){
     this.tbl = document.getElementById(CalTableId);
     this.isFirst = true;
     this.today = Date;
@@ -100,7 +100,7 @@ Calender.prototype.build = function(){
         document.getElementById(prev).addEventListener('click',(e)=>{
                 e.preventDefault();
                 this.isFirst=false;
-                this.setNext();
+                this.setPrev();
             });
         cell = row.insertCell();
         cell.colSpan = 5;
@@ -183,6 +183,9 @@ Calender.prototype.build = function(){
         mo.style.display= 'inline-block'
       };   
   });
+  mo.addEventListener('click', function(){
+    mo.innerText=" "
+  })
  
   calender.addEventListener('click',function(){
     if(calen.style.display=='inline-block'){

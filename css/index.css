@@ -36,7 +36,8 @@ header:hover {
 img {
   vertical-align: middle;
 }
-input[type="checkbox"]:hover + .potal:hover {
+input[type="checkbox"]:hover,
+.potal:hover {
   cursor: pointer;
 }
 input[type="checkbox"] {
@@ -65,14 +66,15 @@ input[type="checkbox"] {
   top: -7px;
 }
 
-input[type="checkbox"]:hover {
-  cursor: pointer;
-}
 input[type="text"] {
   border: 1px solid rgb(156, 156, 156);
   height: 30px;
-  font-size: 19px;
+  font-size: 18px;
   border-radius: 5px;
+}
+input[type="text"]:focus {
+  outline: none;
+  border: 1.5px solid rgb(95, 95, 95);
 }
 input[type="submit"] {
   width: 35px;
@@ -87,6 +89,7 @@ input[type="submit"] {
 }
 input[type="submit"]:hover {
   cursor: pointer;
+  background-color: rgb(173, 173, 173);
 }
 .social:hover {
   cursor: pointer;
@@ -120,9 +123,10 @@ footer {
   position: absolute;
   left: 9.5%;
   bottom: -5%;
-  border: 5px solid rgb(221, 196, 196);
-  background-color: #f2cac8;
+  border: 3px solid rgb(242, 242, 242);
+  background-color: #ffffff;
   border-radius: 10px;
+  box-shadow: 0px 0px 17px 0px rgb(239, 239, 239);
   padding-top: 15px;
   width: 200px;
   height: 65px;
@@ -134,67 +138,23 @@ footer {
   font-size: 25px;
   right: 1.54%;
   font: bold;
-  color: rgb(68, 68, 68);
+  color: rgb(99, 99, 99);
 }
 .timer_button {
-  border: 0.5px solid rgb(192, 192, 192);
+  border: 0.5px solid rgb(226, 226, 226);
   position: relative;
   left: 5.5%;
   bottom: 50%;
-  color: rgb(68, 68, 68);
-  background-color: rgb(238, 203, 218);
+  color: rgb(112, 112, 112);
+  background-color: rgb(242, 242, 242);
   border-radius: 10px;
   font-size: 17px;
   width: 55px;
 }
-/* for calculator */
-
-.calculator {
-  display: none;
-  position: absolute;
-  left: 12%;
-  bottom: -5%;
-  box-sizing: border-box;
-  width: 190px;
-  border: 1px solid rgb(87, 87, 87);
-  background-color: #f2cac8;
-  padding: 5px;
-  border-radius: 10px;
-}
-.calculator form {
-  display: grid;
-  grid-template-columns: repeat(4, 44px);
-  grid-auto-rows: 40px;
-}
-.calculator form input {
-  border: 2px solid rgb(87, 87, 87);
-  cursor: pointer;
-  font-size: 22px;
-  border-radius: 10px;
-}
-.calculator form input:hover {
-  box-shadow: 1px 1px 2px rgb(87, 87, 87);
-}
-.calculator form .clear {
-  background-color: #fdbb75;
-  grid-column: span 3;
-}
-.calculator form .operator {
-  background-color: #fb938f;
-  font-size: 26px;
-}
-.calculator form .dot {
-  background-color: #c36b85;
-  font-size: 28px;
-}
-.calculator form input[type="text"] {
-  grid-column: span 4;
-  height: 33px;
-  text-align: right;
-  padding: 0 10px;
-}
-.calculator form .Cresult {
-  grid-column: span 2;
+.timer_button:hover {
+  background-color: rgb(0, 122, 255);
+  color: #ffffff;
+  transition: 0.3s;
 }
 /* for memo */
 #mo {
@@ -206,18 +166,86 @@ footer {
   width: 250px;
   border-radius: 10%;
   padding: 01.5%;
-  color: #474747;
-  background-color: #f7e9e9;
-  border: 0.5px solid #ecd3da;
+  color: rgb(111, 111, 111);
+  background-color: rgb(248, 247, 247);
+  border: 0.5px solid rgb(235, 235, 235);
+  font-size: 18px;
+  font-weight: 800;
+  box-shadow: 0px 0px 19px 0px rgb(233, 232, 232);
 }
+#mo:focus {
+  outline: none;
+  border: 0.5px solid #cecece;
+}
+/* for calculator */
+.calculator {
+  display: none;
+  position: absolute;
+  left: 12%;
+  bottom: -5%;
+  box-sizing: border-box;
+  width: 190px;
+  border: 0.5px solid rgb(235, 235, 235);
+  background-color: #fafafa;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 19px 0px rgb(233, 232, 232);
+}
+.calculator form {
+  display: grid;
+  grid-template-columns: repeat(4, 44px);
+  grid-auto-rows: 40px;
+}
+.calculator form input {
+  border: 0.5px solid rgb(224, 224, 224);
+  cursor: pointer;
+  font-size: 22px;
+  border-radius: 10px;
+}
+.calculator form input[type="button"] {
+  margin: 1.8%;
+  color: rgb(97, 97, 97);
+}
+.calculator form input[type="text"] {
+  border: 1px solid rgb(206, 206, 206);
+  background-color: rgb(248, 248, 248);
+}
+.calculator form input:hover {
+  box-shadow: 1px 1px 2px rgb(231, 231, 231);
+  background-color: rgb(223, 222, 222);
+  transition: 0.3s;
+}
+.clear {
+  background-color: rgb(192, 192, 192);
+  grid-column: span 3;
+}
+.calculator form .operator {
+  background-color: rgb(199, 199, 199);
+  font-size: 26px;
+  color: rgb(97, 97, 97);
+}
+.calculator form .dot {
+  background-color: rgb(196, 196, 196);
+  font-size: 28px;
+}
+.calculator form input[type="text"] {
+  grid-column: span 4;
+  height: 33px;
+  text-align: right;
+  padding: 0 10px;
+}
+.calculator form .Cresult {
+  grid-column: span 2;
+}
+
 /* for calender */
 td {
-  padding-right: 10px;
+  padding-right: 8px;
   position: relative;
   transform: translate(6px, 0px);
 }
 tbody tr:nth-child(2) td {
-  padding-right: 8.5px;
+  margin-right: 4.7px;
 }
 tbody tr:nth-child(2) {
   display: flex;
@@ -234,13 +262,14 @@ tbody tr td:nth-child(1) {
 
 .calen {
   display: none;
-  background-color: rgb(207, 169, 169);
+  background-color: rgb(245, 245, 245);
   border-radius: 15%;
   width: 250px;
   height: 270px;
   position: absolute;
   left: 15%;
   bottom: -5%;
+  box-shadow: 0px 0px 17px 0px rgb(239, 239, 239);
 }
 .calenar {
   border-radius: 15%;
@@ -253,9 +282,10 @@ tbody tr td:nth-child(1) {
 .calenar td {
   text-align: center;
   font-size: 17px;
+  color: rgb(145, 145, 145);
 }
 .calenar button {
-  background-color: #fff;
+  background-color: rgb(235, 235, 235);
   width: 100%;
   height: 100%;
   font-size: 15px;
@@ -269,15 +299,13 @@ tbody tr td:nth-child(1) {
   position: relative;
 }
 .calenar button:hover {
-  background-color: skyblue;
-  transition: 1s;
+  background-color: rgb(0, 122, 255);
+  color: white;
+  transition: 0.3s;
 }
-.calenartr:first-child {
-  background-color: royalblue;
-  border-radius: 40px;
-}
+
 .calenar tr:first-child td:nth-child(2) {
   font-size: 24px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.045);
-  color: #fff;
+  color: rgb(141, 141, 141);
 }

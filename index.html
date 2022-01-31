@@ -125,6 +125,7 @@
         <input
           type="button"
           class="clear"
+          id="clear"
           value="C"
           onclick="document.forms.output.value=' '"
         />
@@ -216,7 +217,8 @@
         />
       </form>
     </div>
-    <textarea id="mo"> "내용은 저장되지 않습니다."</textarea>
+    <!--메모-->
+    <textarea id="mo"> 내용은 저장되지 않습니다.</textarea>
     <!-- 캘린더 -->
     <div class="calen" id="calen">
       <table class="calenar" id="cal_0"></table>
@@ -247,7 +249,7 @@
     <script>
       (function () {
         for (let i = 0; i < 12; i++) {
-          new Calender(new Date(2021, i, 1), "cal_" + i).build();
+          new Calender(new Date(2022, i, 1), "cal_" + i).build();
         }
       })();
     </script>
