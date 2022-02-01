@@ -1,3 +1,4 @@
+//검색창 place holder 입력값
 document.addEventListener("DOMContentLoaded", function () {
     var d = new Date();
 
@@ -195,5 +196,4 @@ Calender.prototype.build = function(){
   });
    
     
-    //  search.addEventListener('click',function(){search.sc.value = 'randText';});
  

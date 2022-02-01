@@ -82,44 +82,46 @@
           /><input id="button-addon" type="submit" value="?" />
         </p>
       </form>
-      <img
-        onclick="location.href='https://www.instagram.com/'"
-        class="social"
-        id="instagram"
-        src="icons\instagram.png"
-        alt="instagram"
-        width="32"
-      />
-      <img
-        onclick="location.href='https://www.facebook.com/'"
-        class="social"
-        id="facebook"
-        src="icons\facebook.png"
-        alt="facebook"
-        width="32"
-      />
-      <img
-        onclick="location.href='https://twitter.com/'"
-        class="social"
-        id="twitter"
-        src="icons\twitter.png"
-        alt="twitter"
-        width="32"
-      />
+      <button class="social" id="instagram0">
+        <img
+          onclick="location.href='https://www.instagram.com/'"
+          id="instagram"
+          src="icons\instagram.png"
+          alt="instagram"
+          width="32"
+        />
+      </button>
+      <button class="social" id="facebook0">
+        <img
+          onclick="location.href='https://www.facebook.com/'"
+          id="facebook"
+          src="icons\facebook.png"
+          alt="facebook"
+          width="32"
+        />
+      </button>
+      <button class="social" id="twitter0">
+        <img
+          onclick="location.href='https://twitter.com/'"
+          id="twitter"
+          src="icons\twitter.png"
+          alt="twitter"
+          width="32"
+        />
+      </button>
     </section>
 
     <!--타이머-->
-    <div class="timer_wrap" id="timer">
+    <div class="timer_wrap" id="timer" draggable="true">
       <div class="timer">00:00.00</div>
       <div class="buttons">
         <button class="timer_button start">start</button>
         <button class="timer_button stop">stop</button>
         <button class="timer_button reset">reset</button>
       </div>
-
-      <!-- 계산기 -->
     </div>
-    <div class="calculator" id="calculator">
+    <!-- 계산기 -->
+    <div class="calculator" id="calculator" draggable="true">
       <form name="forms">
         <input type="text" name="output" />
         <input
@@ -218,9 +220,9 @@
       </form>
     </div>
     <!--메모-->
-    <textarea id="mo"> 내용은 저장되지 않습니다.</textarea>
+    <textarea id="mo" draggable="true"> 내용은 저장되지 않습니다.</textarea>
     <!-- 캘린더 -->
-    <div class="calen" id="calen">
+    <div class="calen" id="calen" draggable="true">
       <table class="calenar" id="cal_0"></table>
     </div>
 
