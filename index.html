@@ -112,118 +112,128 @@
     </section>
 
     <!--타이머-->
-    <div class="timer_wrap" id="timer" draggable="true">
-      <div class="timer">00:00.00</div>
-      <div class="buttons">
-        <button class="timer_button start">start</button>
-        <button class="timer_button stop">stop</button>
-        <button class="timer_button reset">reset</button>
+    <div class="to">
+      <div class="timer_wrap draggable" id="timer" draggable="true">
+        <div class="timer">00:00.00</div>
+        <div class="buttons">
+          <button class="timer_button start">start</button>
+          <button class="timer_button stop">stop</button>
+          <button class="timer_button reset">reset</button>
+        </div>
       </div>
     </div>
     <!-- 계산기 -->
-    <div class="calculator" id="calculator" draggable="true">
-      <form name="forms">
-        <input type="text" name="output" />
-        <input
-          type="button"
-          class="clear"
-          id="clear"
-          value="C"
-          onclick="document.forms.output.value=' '"
-        />
-        <input
-          type="button"
-          class="operator"
-          value="/"
-          onclick="document.forms.output.value+='/'"
-        />
-        <input
-          type="button"
-          value="1"
-          onclick="document.forms.output.value='1'"
-        />
-        <input
-          type="button"
-          value="2"
-          onclick="document.forms.output.value+='2'"
-        />
-        <input
-          type="button"
-          value="3"
-          onclick="document.forms.output.value+='3'"
-        />
-        <input
-          type="button"
-          class="operator"
-          value="*"
-          onclick="document.forms.output.value+='*'"
-        />
-        <input
-          type="button"
-          value="4"
-          onclick="document.forms.output.value+='4'"
-        />
-        <input
-          type="button"
-          value="5"
-          onclick="document.forms.output.value+='5'"
-        />
-        <input
-          type="button"
-          value="6"
-          onclick="document.forms.output.value+='6'"
-        />
-        <input
-          type="button"
-          class="operator"
-          value="+"
-          onclick="document.forms.output.value+='+'"
-        />
-        <input
-          type="button"
-          value="7"
-          onclick="document.forms.output.value+='7'"
-        />
-        <input
-          type="button"
-          value="8"
-          onclick="document.forms.output.value+='8'"
-        />
-        <input
-          type="button"
-          value="9"
-          onclick="document.forms.output.value+='9'"
-        />
-        <input
-          type="button"
-          class="operator"
-          value="-"
-          onclick="document.forms.output.value+='-'"
-        />
-        <input
-          type="button"
-          class="dot"
-          value="."
-          onclick="document.forms.output.value+='.'"
-        />
-        <input
-          type="button"
-          value="0"
-          onclick="document.forms.output.value='0'"
-        />
-        <input
-          type="button"
-          class="operator Cresult"
-          value="="
-          onclick="document.forms.output.value=eval(document.forms.output.value)"
-        />
-      </form>
+    <div class="to">
+      <div class="calculator draggable" id="calculator" draggable="true">
+        <form name="forms">
+          <input type="text" name="output" />
+          <input
+            type="button"
+            class="clear"
+            id="clear"
+            value="C"
+            onclick="document.forms.output.value=' '"
+          />
+          <input
+            type="button"
+            class="operator"
+            value="/"
+            onclick="document.forms.output.value+='/'"
+          />
+          <input
+            type="button"
+            value="1"
+            onclick="document.forms.output.value='1'"
+          />
+          <input
+            type="button"
+            value="2"
+            onclick="document.forms.output.value+='2'"
+          />
+          <input
+            type="button"
+            value="3"
+            onclick="document.forms.output.value+='3'"
+          />
+          <input
+            type="button"
+            class="operator"
+            value="*"
+            onclick="document.forms.output.value+='*'"
+          />
+          <input
+            type="button"
+            value="4"
+            onclick="document.forms.output.value+='4'"
+          />
+          <input
+            type="button"
+            value="5"
+            onclick="document.forms.output.value+='5'"
+          />
+          <input
+            type="button"
+            value="6"
+            onclick="document.forms.output.value+='6'"
+          />
+          <input
+            type="button"
+            class="operator"
+            value="+"
+            onclick="document.forms.output.value+='+'"
+          />
+          <input
+            type="button"
+            value="7"
+            onclick="document.forms.output.value+='7'"
+          />
+          <input
+            type="button"
+            value="8"
+            onclick="document.forms.output.value+='8'"
+          />
+          <input
+            type="button"
+            value="9"
+            onclick="document.forms.output.value+='9'"
+          />
+          <input
+            type="button"
+            class="operator"
+            value="-"
+            onclick="document.forms.output.value+='-'"
+          />
+          <input
+            type="button"
+            class="dot"
+            value="."
+            onclick="document.forms.output.value+='.'"
+          />
+          <input
+            type="button"
+            value="0"
+            onclick="document.forms.output.value='0'"
+          />
+          <input
+            type="button"
+            class="operator Cresult"
+            value="="
+            onclick="document.forms.output.value=eval(document.forms.output.value)"
+          />
+        </form>
+      </div>
     </div>
     <!--메모-->
-    <textarea id="mo" draggable="true"> 내용은 저장되지 않습니다.</textarea>
+    <div class="to">
+      <textarea class="draggable" id="mo" draggable="true">
+  내용은 저장되지 않습니다.</textarea
+      >
+    </div>
     <!-- 캘린더 -->
-    <div class="calen" id="calen" draggable="true">
-      <table class="calenar" id="cal_0"></table>
+    <div class="to">
+      <div class="calen draggable" id="calen" draggable="true">
+        <table class="calenar" id="cal_0"></table>
+      </div>
     </div>
 
     <footer>
@@ -246,6 +256,7 @@
         <img class="tool" src="icons\calendar.png" width="25" alt="calendar" />
       </button>
     </footer>
+    <div class="container" id="tome"></div>
     <script src="timer.js"></script>
     <script src="index.js"></script>
     <script>
