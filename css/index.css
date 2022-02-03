@@ -329,9 +329,7 @@ tbody tr td:nth-child(1) {
   border-bottom: 1px solid rgba(0, 0, 0, 0.045);
   color: rgb(141, 141, 141);
 }
-
-.container {
-  /* display: none; */
+#tome {
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
@@ -340,12 +338,16 @@ tbody tr td:nth-child(1) {
   height: 280px;
   width: 1000px;
   position: absolute;
-  left: 23%;
+  left: 26%;
   bottom: -8.7%;
-  background-color: #b5c1dc57;
+  background-color: rgba(255, 255, 255, 0);
   border-radius: 12px;
 }
-
+#put {
+  display: none;
+  font-size: 3rem;
+  color: rgba(0, 0, 0, 0.315);
+}
 .to {
   position: absolute;
   left: 11%;

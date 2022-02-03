@@ -161,12 +161,15 @@ Calender.prototype.build = function(){
   const memo = document.getElementById('me');
   const calen = document.getElementById('calen');
   const calender = document.getElementById('calender');
-  
+  const tome = document.getElementById('tome');
+ 
   
   cal.addEventListener('click',function(){
    if(calculator.style.display== 'inline-block'){
-    calculator.style.display='none'
-   }else{calculator.style.display= 'inline-block';
+    calculator.style.display='none';
+     }else{calculator.style.display= 'inline-block';
+   tome.style.border='1px solid silver';
+   put.style.display='inline-block';
   }
   });
  
@@ -174,14 +177,18 @@ Calender.prototype.build = function(){
   ti.addEventListener('click',function(){
     if(timer.style.display=='inline-block'){
       timer.style.display= 'none'}else{
-        timer.style.display= 'inline-block'
+        timer.style.display= 'inline-block';
+        tome.style.border='1px solid silver';
+        put.style.display='inline-block';
       };   
   });
     
   memo.addEventListener('click',function(){
     if(mo.style.display=='inline-block'){
       mo.style.display= 'none'}else{
-        mo.style.display= 'inline-block'
+        mo.style.display= 'inline-block';
+        tome.style.border='1px solid silver';
+        put.style.display='inline-block';
       };   
   });
   mo.addEventListener('click', function(){
@@ -191,21 +198,26 @@ Calender.prototype.build = function(){
   calender.addEventListener('click',function(){
     if(calen.style.display=='inline-block'){
       calen.style.display= 'none'}else{
-        calen.style.display= 'inline-block'
+        calen.style.display= 'inline-block';
+        tome.style.border='1px solid silver';
+        put.style.display='inline-block';
       };   
   });
-   
+
   //drag and drop
+  const put = document.getElementById('put');
   const draggables = document.querySelectorAll(".draggable");
   const containers = document.querySelectorAll(".container");
   
   draggables.forEach(draggable => {
     draggable.addEventListener("dragstart", () => {
       draggable.classList.add("dragging");
+      put.style.display='none';
     });
   
     draggable.addEventListener("dragend", () => {
       draggable.classList.remove("dragging");
+      put.style.display= 'none';
     });
   });
   
@@ -216,5 +228,4 @@ Calender.prototype.build = function(){
       container.appendChild(draggable);
     });
   });
-
-  
+ 
