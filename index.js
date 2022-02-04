@@ -161,15 +161,12 @@ Calender.prototype.build = function(){
   const memo = document.getElementById('me');
   const calen = document.getElementById('calen');
   const calender = document.getElementById('calender');
-  const tome = document.getElementById('tome');
  
   
   cal.addEventListener('click',function(){
    if(calculator.style.display== 'inline-block'){
     calculator.style.display='none';
      }else{calculator.style.display= 'inline-block';
-   tome.style.border='1px solid silver';
-   put.style.display='inline-block';
   }
   });
  
@@ -178,8 +175,6 @@ Calender.prototype.build = function(){
     if(timer.style.display=='inline-block'){
       timer.style.display= 'none'}else{
         timer.style.display= 'inline-block';
-        tome.style.border='1px solid silver';
-        put.style.display='inline-block';
       };   
   });
     
@@ -187,8 +182,6 @@ Calender.prototype.build = function(){
     if(mo.style.display=='inline-block'){
       mo.style.display= 'none'}else{
         mo.style.display= 'inline-block';
-        tome.style.border='1px solid silver';
-        put.style.display='inline-block';
       };   
   });
   mo.addEventListener('click', function(){
@@ -199,33 +192,46 @@ Calender.prototype.build = function(){
     if(calen.style.display=='inline-block'){
       calen.style.display= 'none'}else{
         calen.style.display= 'inline-block';
-        tome.style.border='1px solid silver';
-        put.style.display='inline-block';
       };   
   });
 
+  
   //drag and drop
-  const put = document.getElementById('put');
-  const draggables = document.querySelectorAll(".draggable");
-  const containers = document.querySelectorAll(".container");
-  
-  draggables.forEach(draggable => {
-    draggable.addEventListener("dragstart", () => {
-      draggable.classList.add("dragging");
-      put.style.display='none';
-    });
-  
-    draggable.addEventListener("dragend", () => {
-      draggable.classList.remove("dragging");
-      put.style.display= 'none';
-    });
-  });
-  
-  containers.forEach(container => {
-    container.addEventListener("dragover", e => {
-      e.preventDefault();
-      const draggable = document.querySelector(".dragging");
-      container.appendChild(draggable);
-    });
-  });
- 
+  var img_L = 0;
+  var img_T = 0;
+  var targetObj;
+
+  function getLeft(o) {
+    return parseInt(o.style.left.replace("px", ""));
+  }
+  function getTop(o) {
+    return parseInt(o.style.top.replace("px", ""));
+  }
+
+  // 이미지 움직이기
+  function moveDrag(e) {
+    var e_obj = window.event ? window.event : e;
+    var dmvx = parseInt(e_obj.clientX + img_L);
+    var dmvy = parseInt(e_obj.clientY + img_T);
+    targetObj.style.left = dmvx + "px";
+    targetObj.style.top = dmvy + "px";
+    return false;
+  }
+
+  // 드래그 시작
+  function startDrag(e, obj) {
+    targetObj = obj;
+    var e_obj = window.event ? window.event : e;
+    img_L = getLeft(obj) - e_obj.clientX;
+    img_T = getTop(obj) - e_obj.clientY;
+
+    document.onmousemove = moveDrag;
+    document.onmouseup = stopDrag;
+    if (e_obj.preventDefault) e_obj.preventDefault();
+  }
+
+  // 드래그 멈추기
+  function stopDrag() {
+    document.onmousemove = null;
+    document.onmouseup = null;
+  }

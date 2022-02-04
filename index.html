@@ -112,8 +112,18 @@
     </section>
 
     <!--타이머-->
-    <div class="to">
-      <div class="timer_wrap draggable" id="timer" draggable="true">
+    <div
+      class="to"
+      onmousedown="startDrag(event, this)"
+      style="
+        position: absolute;
+        left: 100px;
+        top: 710px;
+        cursor: pointer;
+        cursor: hand;
+      "
+    >
+      <div class="timer_wrap" id="timer">
         <div class="timer">00:00.00</div>
         <div class="buttons">
           <button class="timer_button start">start</button>
@@ -123,8 +133,18 @@
       </div>
     </div>
     <!-- 계산기 -->
-    <div class="to">
-      <div class="calculator draggable" id="calculator" draggable="true">
+    <div
+      class="to"
+      onmousedown="startDrag(event, this)"
+      style="
+        position: absolute;
+        left: 180px;
+        top: 790px;
+        cursor: pointer;
+        cursor: hand;
+      "
+    >
+      <div class="calculator" id="calculator">
         <form name="forms">
           <input type="text" name="output" />
           <input
@@ -224,14 +244,32 @@
       </div>
     </div>
     <!--메모-->
-    <div class="to">
-      <textarea class="draggable" id="mo" draggable="true">
-  내용은 저장되지 않습니다.</textarea
-      >
+    <div
+      class="to"
+      ondragover="startDrag(event, this)"
+      style="
+        position: absolute;
+        left: 150px;
+        top: 880px;
+        cursor: pointer;
+        cursor: hand;
+      "
+    >
+      <textarea id="mo">  내용은 저장되지 않습니다.</textarea>
     </div>
     <!-- 캘린더 -->
-    <div class="to">
-      <div class="calen draggable" id="calen" draggable="true">
+    <div
+      class="to"
+      onmousedown="startDrag(event, this)"
+      style="
+        position: absolute;
+        left: 210px;
+        top: 525px;
+        cursor: pointer;
+        cursor: hand;
+      "
+    >
+      <div class="calen" id="calen">
         <table class="calenar" id="cal_0"></table>
       </div>
     </div>
@@ -241,7 +279,20 @@
         <img class="tool" src="icons\timer.png" width="25" alt="timer" />
       </button>
 
-      <button id="me">
+      <button cless="items" id="me">
+        <div
+          class="to"
+          ondragover="startDrag(event, this)"
+          style="
+            position: absolute;
+            left: 150px;
+            top: 880px;
+            cursor: pointer;
+            cursor: hand;
+          "
+        >
+          <textarea id="mo">  내용은 저장되지 않습니다.</textarea>
+        </div>
         <img class="tool" src="icons\notebook.png" width="25" alt="memo" />
       </button>
       <button id="cal">
@@ -256,7 +307,6 @@
         <img class="tool" src="icons\calendar.png" width="25" alt="calendar" />
       </button>
     </footer>
-    <div class="container" id="tome"><span id="put">put it here!</span></div>
     <script src="timer.js"></script>
     <script src="index.js"></script>
     <script>
