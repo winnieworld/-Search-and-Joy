@@ -1,5 +1,8 @@
 //검색창 place holder 입력값
 document.addEventListener("DOMContentLoaded", function () {
+  if(screen.width<770){      
+    return search.searchtext.placeholder ="검색어를 입력해주세요. :)";
+   }
     var d = new Date();
 
     var getday = d.getDay();
@@ -62,8 +65,10 @@ document.addEventListener("DOMContentLoaded", function () {
         search.searchtext.placeholder = `${yyyy}년 ${mm}월 ${dd}일 ${n} ${clockTime}`
     }, 1000);
     
+  
    
   });
+ 
 
   //캘린더
 function Calender(Date, CalTableId){
