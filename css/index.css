@@ -3,7 +3,7 @@ body {
   flex-direction: column;
   align-items: center;
   margin: 8%;
-  height: 100vh;
+  height: 2000px;
 }
 body:before {
   content: "";
@@ -73,7 +73,7 @@ input[type="checkbox"] {
 form > p {
   display: flex;
 }
-input[type="text"] {
+input[type="search"] {
   box-sizing: border-box;
   padding: 2%;
   height: 30px;
@@ -81,7 +81,7 @@ input[type="text"] {
   border-radius: 5px;
   font-size: 18px;
 }
-input[type="text"]:focus {
+input[type="search"]:focus {
   outline: none;
   border: 1.5px solid rgb(95, 95, 95);
 }
@@ -323,27 +323,34 @@ tbody tr td:nth-child(1) {
   color: rgb(141, 141, 141);
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 1288px) {
   input[type="checkbox"] {
     width: 13px;
     height: 13px;
   }
-
+  .tool {
+    display: none;
+  }
   .potal {
     width: 100px;
   }
   #potal4 {
     width: 85px;
   }
-  input[type="text"] {
+  input[type="search"] {
     width: 580px;
     height: 25px;
+  }
+  input[type="submit"] {
+    width: 50px;
+    height: 28px;
+    font-size: 1rem;
   }
   .social > img {
     width: 24px;
   }
 }
-@media (max-width: 770px) {
+@media (max-width: 882px) {
   body {
     display: flex;
     background-color: rgb(48, 48, 50);
@@ -361,12 +368,13 @@ tbody tr td:nth-child(1) {
     top: -25px;
     width: 70px;
   }
-  input[type="text"] {
+
+  input[type="search"] {
     position: relative;
     top: -25px;
     left: 8%;
     margin-left: 1%;
-    width: 80%;
+    width: 85%;
     height: 30px;
     border-color: rgb(173, 90, 197);
     background-color: rgb(42, 42, 44);
@@ -379,7 +387,7 @@ tbody tr td:nth-child(1) {
 
   nav {
     position: relative;
-    top: 4%;
+    top: 1.7%;
     display: grid;
     justify-items: center;
     align-items: center;

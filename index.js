@@ -157,7 +157,6 @@ Calender.prototype.build = function(){
     }
 }
 
-
   const cal = document.getElementById('cal');
   const calculator = document.getElementById('calculator');
   const ti = document.getElementById('ti');

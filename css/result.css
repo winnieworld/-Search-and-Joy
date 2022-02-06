@@ -55,7 +55,7 @@ header {
 header {
   border-bottom: 1px solid rgb(156, 156, 156);
 }
-input[type="text"] {
+input[type="search"] {
   border: 1px solid rgb(156, 156, 156);
   height: 25px;
   font-size: 17px;
@@ -92,4 +92,28 @@ select {
 select {
   background-color: #fff;
   color: #585858;
+}
+@media (max-width: 882px) {
+  body {
+    margin: 0;
+    display: flex;
+    background-color: rgb(48, 48, 50);
+  }
+  #ww {
+    margin-right: 0%;
+    align-self: flex-end;
+  }
+
+  input[type="submit"] {
+    display: none;
+  }
+  input[type="search"] {
+    margin-left: 1%;
+    width: 80vw;
+    height: 30px;
+    border-color: rgb(173, 90, 197);
+    background-color: rgb(42, 42, 44);
+    font-size: 16px;
+    color: #bebebe;
+  }
 }
