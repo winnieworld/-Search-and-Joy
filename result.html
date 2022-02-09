@@ -24,10 +24,18 @@
               <input
                 type="search"
                 size="80px"
+                name="txt_sch"
+                id="txt_sch"
+                value=""
                 placeholder="검색어를 입력하세요:)"
                 aria-label="검색어를 입력하세요"
                 aria-describedby="button-addon"
-              /><input id="button-addon" type="submit" value="?" />
+              /><input
+                id="button-addon"
+                type="submit"
+                value="?"
+                onclick="javascript:goSearch();"
+              />
             </p>
           </form>
         </div>

@@ -29,10 +29,10 @@ input[type="checkbox"]:hover + .potal:hover {
   cursor: pointer;
 }
 input[type="checkbox"] {
-  border: 1px solid rgb(156, 156, 156);
-  border-radius: 5px;
   position: relative;
   bottom: 14px;
+  border: 1px solid rgb(156, 156, 156);
+  border-radius: 5px;
 }
 input[type="submit"] {
   width: 30px;
@@ -45,35 +45,33 @@ input[type="submit"] {
 }
 header {
   box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: flex-start;
   padding-top: 12px;
   width: 100vw;
   height: 80px;
-  display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  justify-content: center;
-  flex-direction: row;
-  flex-wrap: nowrap;
 }
 .sch {
   display: flex;
 }
 #ww {
-  float: left;
   margin-right: 10px;
   width: auto;
   height: auto;
   max-width: 60px;
   max-height: 60px;
+  float: left;
 }
 header {
   border-bottom: 1px solid rgb(156, 156, 156);
 }
 input[type="search"] {
-  border: 1px solid rgb(156, 156, 156);
   height: 25px;
-  font-size: 17px;
+  border: 1px solid rgb(156, 156, 156);
   border-radius: 5px;
+  font-size: 17px;
 }
 
 .potal {
@@ -91,16 +89,16 @@ nav {
 select {
   width: 100px;
   height: 28px;
-  font-size: 15px;
-  color: rgb(219, 219, 219);
-  background-color: #585858;
   border: 2px solid #ddd;
   border-radius: 7px;
+  background-color: #585858;
+  font-size: 15px;
+  color: rgb(219, 219, 219);
 }
 .selector {
-  text-align: right;
   position: relative;
   transform: translate(-8%, 80%);
+  text-align: right;
 }
 select {
   background-color: #fff;
@@ -125,8 +123,8 @@ footer img:hover {
   header {
     flex-direction: column;
     align-items: center;
-    height: 130px;
     padding-bottom: 17px;
+    height: 130px;
   }
 }
 @media (max-width: 882px) {
@@ -141,8 +139,8 @@ footer img:hover {
   header {
     flex-direction: column;
     align-items: center;
-    height: 130px;
     padding: 0 0 12px 0;
+    height: 130px;
     border-color: rgba(44, 44, 44, 0);
   }
   #ww {
@@ -175,14 +173,13 @@ footer img:hover {
     display: none;
   }
   nav {
+    display: flex;
+    justify-content: center;
     align-self: center;
+    margin: 0;
     width: 100vw;
     height: 100%;
     background-color: rgb(71, 64, 134);
-    margin: 0;
-    display: flex;
-
-    justify-content: center;
   }
   #potal4 {
     top: -4px;
@@ -204,13 +201,13 @@ footer img:hover {
   }
   nav {
     box-sizing: border-box;
-    padding: 2% 20% 1.3% 20%;
-    height: 90px;
     display: grid;
     justify-items: center;
     align-items: center;
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(3, 1fr);
+    padding: 2% 20% 1.3% 20%;
+    height: 90px;
   }
   #potal5,
   #potal6 {
