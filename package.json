@@ -1,0 +1,29 @@
+{
+  "name": "-search-and-joy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/winnieworld/-Search-and-Joy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/winnieworld/-Search-and-Joy/issues"
+  },
+  "homepage": "https://github.com/winnieworld/-Search-and-Joy#readme",
+  "dependencies": {
+    "axios": "^0.25.0",
+    "express": "^4.17.2",
+    "nunjucks": "^3.2.3",
+    "request": "^2.88.2"
+  }
+}
